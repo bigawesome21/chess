@@ -8,7 +8,7 @@ class Homepage extends React.Component {
       <div className="homepage">
         <img src={logo} className="homepage-logo" alt="logo" />
         <p>Welcome!</p>
-        <a href="/board/new">Start!</a>
+        <a href="/board">Start!</a>
       </div>
     );
   }
