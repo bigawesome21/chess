@@ -1,12 +1,14 @@
 import React from 'react';
 import logo from './chess.png';
 
-const Header = () => (
-
-	<header>
-
-        <img src={logo} className="homepage-logo" />
-	</header>
-);
+class Header extends React.Component {
+  render() {
+    return (
+      <header>
+        <img src={logo} className="header-logo" alt="chess logo"/>
+	    </header>
+    );
+  }
+}
 
 export default Header;
