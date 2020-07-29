@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import Homepage from './Homepage.js';
 import Header from './Header.js';
-import Chessboard from './Chessboard.js';
+import Board from './Board.js';
 import {
   BrowserRouter as Router,
   Route,
@@ -17,7 +17,7 @@ class App extends React.Component {
         <Router>
           <Switch>
             <Route path="/board">
-              <Chessboard />
+              <Board />
             </Route>
             <Route path="/">
               <Homepage />
