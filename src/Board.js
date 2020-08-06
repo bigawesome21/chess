@@ -2,10 +2,12 @@ import React from 'react';
 import Chessboard from 'react-simple-chessboard';
 
 class Board extends React.Component {
-  render() {
-    var position = 'start';
+  render() { 
     return (
-      <Chessboard position={position} />
+      <Chessboard 
+        draggable={true}
+        position={'start'}
+        dropOffBoard={true} /> 
     );
   }
 }
