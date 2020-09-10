@@ -157,7 +157,7 @@ class FEN {
     var numOfSpecificPiece = 0;
     let splitRowWithOnlyPieces = rowWithOnlyPieces.split('');
 
-    for (var i; i < splitRowWithOnlyPieces.length; i++) {
+    for (var i = 0; i < splitRowWithOnlyPieces.length; i++) {
       
       if (splitRowWithOnlyPieces[i] === chessPiece) {
         numOfSpecificPiece++;
@@ -286,7 +286,7 @@ class FEN {
 
             return 9-(differentRows[0]+1);
           }
-          else if (numOfThisPieces1[i] > numOfOtherPieces1[i] && numOfThisPieces2 < numOfOtherPieces2[i]) {
+          else if (numOfThisPieces1[i] > numOfOtherPieces1[i] && numOfThisPieces2[i] < numOfOtherPieces2[i]) {
             
             return 9-(differentRows[1]+1); 
           }
@@ -339,8 +339,7 @@ class FEN {
 
     getMove(otherFEN) {
       
-      return this.getPieceThatMoved(otherFEN);
-      //+ this.getColumn(otherFEN) + this.getRow(otherFEN);
+      return this.getPieceThatMoved(otherFEN) + this.getColumn(otherFEN) + this.getRow(otherFEN);
     }
 }
 
